@@ -2,7 +2,10 @@
 #include <iostream>
 #include <random>
 #include <vector>
-#include "omp.h"
+
+#ifdef _OPENMP
+    #include "omp.h"
+#endif
 
 std::discrete_distribution<int> game_distribution(){
     // define a distribution based on weights
