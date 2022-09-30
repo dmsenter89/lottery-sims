@@ -1,0 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/alpine
+{
+	"name": "Alpine",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Alpine version: 3.13, 3.14, 3.15, 3.16
+		"args": { "VARIANT": "3.16" }
+	},
+
+	//"containerEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/julia-1.8.2/bin"},
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Settings for Go
+			"settings": { 
+				"go.toolsManagement.checkForUpdates": "local",
+				"go.useLanguageServer": true,
+				"go.gopath": "/home/vscode/go"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"julialang.language-julia",
+				"golang.go",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	//"postCreateCommand": "",
+
+	// Replace when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--init", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
