@@ -23,7 +23,9 @@
 			"extensions": [
 				"julialang.language-julia",
 				"golang.go",
-				"ms-vscode.cpptools-extension-pack"
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-vscode.cpptools-extension-pack"				
 			]
 		}
 	},
