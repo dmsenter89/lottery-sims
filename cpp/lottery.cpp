@@ -53,8 +53,6 @@ void save_results(const std::vector<int>& v){
 }
 
 int main() {
-    std::cout.imbue(std::locale("en_US.UTF-8")); // show commas when printing numbers
-
     std::cout << "Begin Mega Million simulation." << std::endl;
     std::vector<int> v = mega_millions();
     std::cout << "Finished simulation, saving result." << std::endl;
